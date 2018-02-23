@@ -1,0 +1,43 @@
+--
+-- 转存表中的数据 `admin_login_log`
+--
+
+INSERT INTO `admin_login_log` (`id`, `u_name`, `login_date`, `login_ip`) VALUES
+(5, 'admin', 1453824000, '127.0.0.1'),
+(6, 'admin', 1453824000, '127.0.0.1');
+
+
+--
+-- 转存表中的数据 `admin_user`
+--
+
+INSERT INTO `admin_user` (`id`,`type`,`name`, `u_name`, `u_pwd`, `c_date`, `login_nums`) VALUES
+(0,9,'超级管理员', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 1450406897, 7);
+
+--
+-- 转存表中的数据 `book`
+--
+
+INSERT INTO `book` (`id`, `type_id`, `b_title`, `b_name`, `b_content`, `b_tel`, `b_mail`, `b_qq`, `b_ip`, `is_view`, `c_date`,`dh`) VALUES
+(11, 1, '这个系统收费吗？', '粉丝', '网络上很多开源系统，此留言板程序需要购买吗？', '', '', '', '', 1, 1453879035,'123456');
+
+--
+-- 转存表中的数据 `book_class`
+--
+
+INSERT INTO `book_class` (`id`, `title`, `c_order`) VALUES
+(1, '问题咨询', 1),
+(4, '商务合作', 2),
+(5, '其他', 3);
+
+
+--
+-- 转存表中的数据 `book_reply`
+--
+
+INSERT INTO `book_reply` (`id`, `b_id`, `r_name`, `r_content`, `r_date`) VALUES
+(8, 11, '管理员', '本系统开源免费。没有限制任何功能。但是开源，是指代码没有作加密处理，用户都可以直观看到，但是并不意味着程序没有漏洞，并不意味着用户可以进行商业买卖行为。', 1453879035);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>安装程序</title>
+<link href="./images/style.css" rel="stylesheet" type="text/css" />
+<script src="../Statics/Js/jquery-1.8.3.min.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!--
+    function TestDb()
+    {
+		var dbhost = $('#dbhost').val();
+        var dbuser = $('#dbuser').val();
+        var dbpwd = $('#dbpwd').val();
+		$('#havedbsta').html('<img src=\'images/ajax-loader.gif\'>');
+        var ajaxurl = 'index.php?step=10&dbhost='+dbhost+'&dbuser='+dbuser+'&dbpwd='+dbpwd;
+		$.get(ajaxurl,function(response){
+	        $('#havedbsta').html(response);
+	    },"html");
+		HaveDB();
+    }
+	
+	function HaveDB()
+    {
+		var dbhost = $('#dbhost').val();
+        var dbname = $('#dbname').val();
+        var dbuser = $('#dbuser').val();
+        var dbpwd = $('#dbpwd').val();
+        var ajaxurl = 'index.php?step=10&dbhost='+dbhost+'&dbuser='+dbuser+'&dbpwd='+dbpwd+'&dbname='+dbname;
+		$.get(ajaxurl,function(response){
+	        $('#havedbsta').html(response);
+	    },"html");
+    }
+    
+    function DoInstall()
+    {
+        document.form1.submit();
+    }
+-->
+</script>
+</head>
+<body>
+<div id='postloader' class='waitpage'></div>
+<form action="index.php" method="post" name="form1">
+<input type="hidden" name="step" value="4" />
+<div class="top">
+  <div class="top-logo"></div>
+  
+</div>
+
+<div class="main">
+  <ul class="setpbox">
+    <li class="succeed ks">许可协议</li>
+    <li class="succeed jt">环境检测</li>
+    <li class="now jt">参数配置</li>
+    <li class="jt">安装完成</li>
+  </ul>
+</div>
+<div class="main">
+  <div class="pcenter">
+    <div class="pr-title"><h3>数据库设定</h3></div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+      <tr>
+        <td class="onetd"><strong>数据库主机：</strong></td>
+        <td><input name="dbhost" id="dbhost" type="text" value="localhost" class="input-txt" /><small>一般为localhost</small></td>
+      </tr>
+      <tr>
+        <td class="onetd"><strong>数据库用户：</strong></td>
+        <td><input name="dbuser" id="dbuser" type="text" value="root" class="input-txt" /></td>
+      </tr>
+      <tr>
+        <td class="onetd"><strong>数据库密码：</strong></td>
+        <td><div style='float:left;margin-right:3px;'><input name="dbpwd" id="dbpwd" type="text" class="input-txt" onChange="TestDb()" /></div><div style='float:left' id='dbpwdsta'></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="onetd"><strong>数据库名称：</strong></td>
+        <td><div style='float:left;margin-right:3px;'><input name="dbname" id="dbname" type="text" value="<?php echo $dfDbname; ?>" class="input-txt" onChange="HaveDB()" /></div><div style='float:left' id='havedbsta'></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="onetd"><strong>数据库编码：</strong></td>
+        <td><input type="radio" name="dblang" id="dblang_utf8" value="utf8" checked="checked" /><label for="dblang_latin1">UTF8</label><small>目前只支持utf-8</small></td>
+      </tr>
+    </table>
+    <div class="pr-title"><h3>管理员初始密码</h3></div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox" >
+      <tr>
+        <td class="onetd"><strong>用户名：</strong></td>
+        <td><input name="adminuser" type="text" value="admin" class="input-txt" readonly="readonly"/> [安装后网站后台修改]<p><small>只能用'0-9'、'a-z'、'A-Z'、'.'、'@'、'_'、'-'、'!'以内范围的字符</small></p></td>
+      </tr>
+      <tr>
+        <td class="onetd"><strong>密　码：</strong></td>
+        <td><input name="adminpwd" type="text" value="admin" class="input-txt" readonly="readonly"/> [安装后网站后台修改]</td>
+      </tr>
+    </table>
+    <div class="btn-box">
+      <input type="button" class="btn-back" value="后退" onclick="window.location.href='index.php?step=2';" />
+      <input type="button" class="btn-next" value="开始安装" onclick="DoInstall();" />
+    </div>
+  </div>
+</div>
+<div class="foot">
+</div>
+</form>
+</body>
+</html>

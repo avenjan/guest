@@ -1,0 +1,70 @@
+--
+-- 表的结构 `admin_login_log`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_login_log` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `u_name` varchar(20) NOT NULL,
+  `login_date` int(11) NOT NULL,
+  `login_ip` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- 表的结构 `admin_user`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `type` int(2) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `u_name` varchar(255) NOT NULL,
+  `u_pwd` varchar(255) NOT NULL,
+  `c_date` int(11) NOT NULL,
+  `login_nums` int(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- 表的结构 `book`
+--
+
+CREATE TABLE IF NOT EXISTS `book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_id` int(8) NOT NULL,
+  `b_title` varchar(255) NOT NULL,
+  `b_name` varchar(50) NOT NULL,
+  `b_content` text NOT NULL,
+  `b_tel` varchar(100) NOT NULL,
+  `b_mail` varchar(100) NOT NULL,
+  `b_qq` varchar(50) NOT NULL,
+  `b_ip` varchar(255) NOT NULL,
+  `is_view` int(2) NOT NULL DEFAULT '0',
+  `c_date` int(11) NOT NULL,
+  `dh` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+
+--
+-- 表的结构 `book_class`
+--
+
+CREATE TABLE IF NOT EXISTS `book_class` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `c_order` int(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- 表的结构 `book_reply`
+--
+
+CREATE TABLE IF NOT EXISTS `book_reply` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `b_id` int(11) NOT NULL,
+  `r_name` varchar(50) NOT NULL,
+  `r_content` text NOT NULL,
+  `r_date` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;

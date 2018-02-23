@@ -1,0 +1,269 @@
+@import "tablebox.css";
+
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	background:url(top-bg.png) left top repeat-x;
+	background-color:#FFF;
+}
+ul{
+	list-style:none;
+}
+a{
+	color:#06C;
+}
+a:hover{
+	color:#669900;
+	text-decoration:none;
+}
+input,button,select{
+	vertical-align:middle;
+}
+.fc-690{
+	color:#999;
+}
+.fs-14{
+	font-size:14px;
+}
+
+.top{
+	width:1000px;
+	height:72px;
+	overflow:hidden;
+	margin:0px auto;
+}
+.top .top-logo{
+	width:350px;
+	height:72px;
+	float:left;
+	padding-left:10px;
+	background:url(top-logo.png) 10px 0px no-repeat;
+	overflow:hidden;
+}
+.top .top-logo h1{
+	font-size:0px;
+	line-height:1000%;
+}
+.top .top-link{
+	height:15px;
+	padding:30px 12px 0px 0px;
+	overflow:hidden;
+}
+.top .top-link ul{
+	height:15px;
+	float:right;
+	overflow:hidden;
+}
+.top .top-link ul li{
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+	border-left:1px solid #E8F5E3;
+	margin-left:-1px;
+	line-height:14px;
+}
+.top .top-link ul li a{
+	text-decoration:none;
+	color:#555;
+}
+.top .top-version{
+	height:40px;
+	float:right;
+	padding:7px 12px 0px 0px;
+}
+.top .top-version h2{
+	color:#E8F5E3;
+	font-size:26px;
+	font-style:italic;
+	cursor:default;
+}
+
+.main{
+	width:1000px;
+	margin:14px auto 0px;
+}
+
+.main .pleft{
+	width:168px;
+	float:left;
+	cursor:default;
+	padding-top:6px;
+}
+.main .pright{
+	width:1000px;
+	float:right;
+}
+.main .pcenter{
+	width:1000px;
+}
+
+
+.pr-title{
+	width:1000px;
+	height:22px;
+	margin:8px auto 0px;
+	background:url(boxtitle_bg.gif) 0px 20px repeat-x;
+	overflow:hidden;
+}
+.pr-title h3{
+	width:158px;
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	display:block;
+	font-size:12px;
+	padding-top:1px;
+	text-indent:10px;
+	background:url(boxtitle_bg.gif) 0px -2px no-repeat;
+	letter-spacing:2px;
+	color:#999;
+	font-weight:bold;
+}
+
+.setpbox{
+	height:30px;
+	margin:15px 0px 8px;
+}
+.setpbox li{
+	float:left;
+	padding:0px 20px 0px 30px;
+}
+.setpbox li.succeed{
+	color:#ababab;
+}
+.setpbox li.now{
+	color:#48baca;
+	font-weight:bold;
+}
+.setpbox li.jt{
+	background:url(step_jt.png) 0px 2px no-repeat;
+}
+.setpbox li.ks{
+	background:url(step_ks.png) 0px 3px no-repeat;
+}
+
+.install-msg{
+	padding:10px 20px;
+	color:#777;
+	line-height:31px;
+	font-size:14px;
+	overflow:hidden;
+	clear:both;
+
+}
+
+
+.pr-agreement{
+	padding:16px;
+	line-height:24px;
+	color:#666;
+	height:360px;
+	overflow-y:scroll;
+}
+.pr-agreement strong{
+	display:block;
+	color:#333;
+	line-height:27px;
+	margin-top:6px;
+}
+.pr-agreement p{
+	text-indent:30px;
+}
+
+
+.btn-box{
+	margin-top:15px;
+	border-top:1px solid #DDD;
+	padding:10px 6px;
+	vertical-align:middle;
+}
+.btn-next{
+	width:104px;
+	height:34px;
+	border:none;
+	background:url(but_next.gif) no-repeat;
+	cursor:pointer;
+	margin-left:10px;
+	overflow:hidden;
+	font-size:0px;
+	line-height:100px;
+}
+.btn-back{
+	width:104px;
+	height:34px;
+	border:none;
+	background:url(but_back.gif) no-repeat;
+	cursor:pointer;
+	overflow:hidden;
+	font-size:0px;
+	line-height:100px;
+}
+
+
+#readpact{
+	*margin-top:-4px;
+	margin-right:4px;
+}
+
+.over-link{
+	padding:0px 40px;
+	line-height:41px;
+	overflow:hidden;
+	clear:both;
+}
+.over-link a{
+	line-height:14px;
+	padding:6px 20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#EEE #CCC #CCC #EEE;
+	background:#FAFAFA;
+	color:#333;
+	display:block;
+	float:left;
+	margin-right:20px;
+	text-decoration:none;
+}
+
+.olink a{
+	line-height:14px;
+	padding:2px 20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#EEE #CCC #CCC #EEE;
+	background:#EAF4DD;
+	color:#333;
+	display:block;
+	margin-left:8px;
+	float:left;
+	width:55px;
+	margin-right:20px;
+	text-decoration:none;
+}
+
+.waitpage {
+  top:0;
+  left:0;
+  filter:Alpha(opacity=70);
+  -moz-opacity:0.7;
+  position:absolute;
+  z-index:10000;
+  background:url(loading1.gif) #ababab no-repeat center 200px;
+  width:100%;
+  height:2500px;
+  display:none;
+}
+
+.divpre {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+}
+
+.modulesel {
+  width:120px;
+  margin-right:8px;
+  float:left;
+}
