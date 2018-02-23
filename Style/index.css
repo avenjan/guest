@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* XYCMS */
+*{ margin:0px; padding:0px;}
+body{ font-size:12px; font-family:Microsoft YaHei,Verdana, Geneva, sans-serif; background-color:#fbf9f2;}
+ul,li{ list-style:none;}
+em,i{ font-style:normal;}
+a{ text-decoration:none;}
+.cl{ clear:both;}
+#contain{ width:1098px; border:1px solid  #D2D2D2; border-top-style:none; border-bottom-style:none; background-color:#FFFFFF; margin:0px auto; margin-bottom:60px;}
+#header{ width:1080px; margin:0px auto; overflow:hidden;}
+#header img{ width:100%; height:260px;}
+#box{ width:1080px; margin:0px auto; background:url(Images/b_bg.png) no-repeat left top;}
+.b_l{ width:210px; float:left; margin-right:15px; padding-bottom:50px;}
+.b_l_c{ width:190px; margin:5px auto; overflow:hidden;}
+.b_l_c li{ display:block; width:190px;height:39px; background:url(Images/s2.png) no-repeat left center; overflow: hidden;margin-top:8px; color: #c22007;}
+.b_l_c li a{ font:bold 14px/39px "Microsoft YaHei"; color:#404040; padding-left:36px;}
+.b_l_c li.hover{ background: url(Images/s1.png) no-repeat left center; color:#FFF;}
+.b_l_c li.hover a{ color:#FFF;}
+.b_l_c li a:hover{ background: url(Images/s1.png) no-repeat left center; color:#FFF; width:190px; height:39px; display:block;}
+.b_r{ width:855px; float:right;}
+.b_r_c{ width:100%; margin:10px auto; overflow:hidden;}
+.book{margin-bottom:10px; display:inline;}
+.book .text{border:1px solid #dadada;margin-left:10px; margin-bottom:8px; }
+.book .text .div{padding:10px 20px; }
+.book .text .div .icon{position:absolute;width:20px;height:20px;margin:6px 0 0 -40px;background:url(Images/dot.gif) no-repeat top right; }
+.book .text .div .base{color:#000;border-bottom:1px dashed #ccc;line-height:30px; font-size:13px; font-weight:600; margin-bottom:10px;  }
+.book .text .div .base span{float:right;color:#999; font-size:12px; color:#9A9A9A;  font-family:verdana; }
+.book .text .div .content{line-height:20px; padding-bottom:10px; border-bottom:1px dashed #ccc; overflow:hidden; }
+.book .text .div .reply{padding:10px; background-color:#FFF0DD; font-family:verdana;line-height:30px;margin-top:10px;color:#000;padding-top:5px;}
+.book .text .div .reply strong{color:#f60;}
+.book .text .div .ask{  line-height:24px; color:#848484; }
+
+.add_book{ border:1px #dadada solid;}
+.add_book .add_form{ margin:20px auto; overflow:hidden;}
+.add_book .form{ padding:5% 10%}
+.add_book .add_form .title{ width:100%; border-bottom:1px #0795CB solid; line-height:40px; overflow:hidden; margin-bottom:15px; font:bold 18px/40px "Microsoft YaHei"; color:#FD5913;}
+.b_input{  padding:2px 4px; line-height:24px; border:1px solid #dedede; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+.b_select{ height:30px; line-height:30px; border:1px solid #dedede; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; display:block;}
+.b_textarea{ padding:2px 4px; line-height:24px; border:1px solid #dedede; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+.b_submit{ padding:10px 20px; border:1px solid #dedede; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; background-color:#1173F7; color:#FFF; font-size:14px;}
+.add_book .add_form .form{}
+.add_book .add_form table td{ padding:5px;}
+.add_book .add_form table td{ vertical-align:middle;}
+.add_book .add_form .ms{margin:5%; border:1px #FFD1B3 solid; padding:5px; line-height:26px; background-color:#FFE4D7; margin-top:100px; color:#87411F;}
+#tip{ color:#00F;}
+
+#footer{ width:1080px; margin:5px auto; padding-bottom:20px; overflow:hidden;}
+#footer .line{ width:100%; height:1px; border-bottom:1px #A0A069 solid; margin-bottom:10px; overflow:hidden;}
+#footer .f_dc{ width:100%; line-height:28px; text-align:center;}
+
+/*list pages*/
+.pagination{margin:10px auto; text-align:center; padding:10px 15px 7px;border-top:1px solid #dcdcdc;line-height:20px; margin-left:8px;}
+.pagination .stats{margin-right:10px;display:inline-block;vertical-align:middle;}
+.pagination .stats strong{color:#c00;}
+.pagination a{display:inline-block;padding:2px 8px;border:1px solid #dcdcdc;background:#fff;vertical-align:middle;}
+.pagination a .current{display:inline-block;position:relative;margin:-3px -9px;padding:2px 8px;border:1px solid #e70;color:#e50;background:#fed;vertical-align:middle;cursor:pointer;*left:-9px;-top:-1px;}
+.pagination a:link,.pagination a:visited{color:#06c;}
+.pagination .first:link,.pagenation .first:visited,.pagination .last:link,.pagination .last:visited,.pagination .previous:link,.pagination .previous:visited,.pagination .next:link,.pagination .next:visited{color:#333;}
+
